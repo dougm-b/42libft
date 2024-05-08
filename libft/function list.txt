@@ -31,12 +31,12 @@ ft_split [[[A][M][O][\]]
 	  [[A][L][O][\]]
 	  [[O][L][A][\]]]
 ft_itoa CHECK
-ft_strmapi
-ft_striteri
-ft_putchar_fd
-ft_putstr_fd
-ft_putendl_fd
-ft_putnbr_fd
+ft_strmapi CHECK
+ft_striteri CHECK
+ft_putchar_fd CHECK
+ft_putstr_fd CHECK
+ft_putendl_fd 
+ft_putnbr_fd 
 
 Bonus Part
 ft_lstnew
