@@ -1,0 +1,50 @@
+• isalpha CHECK
+• isdigit CHECK
+• isalnum CHECK
+• isascii CHECK
+• isprint CHECK
+• strlen CHECK
+• memset CHECK
+• bzero	 CHECK
+• memcpy CHECK
+
+• memmove - Verificar diferenca pratica de memmove par memcopy
+• strlcpy 
+• strlcat 
+• toupper CHECK
+• tolower CHECK
+• strchr CHECK
+• strrchr CHECK
+• strncmp CHECK
+• memchr CHECK
+• memcmp CHECHK
+• strnstr CHECK
+• atoi CHECK
+
+• calloc CHECK
+• strdup CHECK
+
+ft_substr CHECK
+ft_strjoin CHECK
+ft_strtrim CHECK
+ft_split [[[A][M][O][\]]
+	  [[A][L][O][\]]
+	  [[O][L][A][\]]]
+ft_itoa CHECK
+ft_strmapi
+ft_striteri
+ft_putchar_fd
+ft_putstr_fd
+ft_putendl_fd
+ft_putnbr_fd
+
+Bonus Part
+ft_lstnew
+ft_lstadd_front
+ft_lstsize
+ft_lstlast
+ft_lstadd_back
+ft_lstdelone
+ft_lstclear
+ft_lstiter
+ft_lstmap

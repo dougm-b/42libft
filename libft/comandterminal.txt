@@ -1,0 +1,12 @@
+cc -Wall -Wextra -Werror [nome do arquivo com .c]
+
+DEBUG
+gcc Wall Wextra Werror [nome do arquivo ft] -g
+lldb
+b main
+run [parametro1] [parametro2]
+gui
+
+TAMANHOS
+size_t = unsigned long long
+
