@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: domoreir <domoreir@student.42.fr>          +#+  +:+       +#+        */
+/*   By: domoreir <domoreir@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 19:32:42 by domoreir          #+#    #+#             */
-/*   Updated: 2024/04/30 19:50:24 by domoreir         ###   ########.fr       */
+/*   Updated: 2024/05/08 20:59:03 by domoreir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	}
 	return (0);
 }
-
+/*
 int main(void)
 {
     const char  *s1 = "Teste para ft_strncmp";
@@ -45,4 +45,4 @@ int main(void)
 
     printf("%d", ft_strncmp(s1, s2, n));
     return(0);
-}
+}*/

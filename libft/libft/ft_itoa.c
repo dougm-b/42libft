@@ -6,7 +6,7 @@
 /*   By: domoreir <domoreir@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/06 23:23:32 by domoreir          #+#    #+#             */
-/*   Updated: 2024/05/07 21:43:36 by domoreir         ###   ########.fr       */
+/*   Updated: 2024/05/08 20:56:19 by domoreir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,7 @@ char	*ft_itoa(int n)
         str[0] = '-';
     return (str);
 }
-
+/*
 int main(void)
 {
     int n;
@@ -68,4 +68,4 @@ int main(void)
     n = -123468834;
     printf("%s",ft_itoa(n));
     return (0);
-}
+}*/

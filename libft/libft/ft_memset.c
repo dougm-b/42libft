@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: domoreir <domoreir@student.42.fr>          +#+  +:+       +#+        */
+/*   By: domoreir <domoreir@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 16:25:14 by domoreir          #+#    #+#             */
-/*   Updated: 2024/04/30 19:23:52 by domoreir         ###   ########.fr       */
+/*   Updated: 2024/05/08 20:57:50 by domoreir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	*ft_memset(void *s, int c, size_t n)
 	}
 	return (ss);
 }
-
+/*
 int	main(void)
 {
 	char	s[5];
@@ -38,3 +38,4 @@ int	main(void)
 	// printf("%p", ft_memset(s, c, n));
 	return (0);
 }
+*/

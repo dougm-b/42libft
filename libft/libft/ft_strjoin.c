@@ -6,7 +6,7 @@
 /*   By: domoreir <domoreir@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/02 00:32:32 by domoreir          #+#    #+#             */
-/*   Updated: 2024/05/02 00:46:17 by domoreir         ###   ########.fr       */
+/*   Updated: 2024/05/08 20:58:20 by domoreir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,11 +39,11 @@ char *ft_strjoin(char const *s1, char const *s2)
     str[i] = '\0';
     return(str);
 }
-
+/*
 int main(void)
 {
     char const *s1="Teste para";
     char const *s2=" a funcao ft_strjoin";
     printf("%s", ft_strjoin(s1,s2));
     return(0);
-}
+}*/

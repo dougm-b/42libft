@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: domoreir <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: domoreir <domoreir@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/10 20:47:01 by domoreir          #+#    #+#             */
-/*   Updated: 2024/04/10 20:47:04 by domoreir         ###   ########.fr       */
+/*   Updated: 2024/05/08 21:00:51 by domoreir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ size_t    ft_strlcpy(char *dest, const char *src, size_t size)
     dest[i] = '\0';
     return (size);
 }
-
+/*
 int main(void)
 {
     const char    *src;
@@ -44,8 +44,9 @@ int main(void)
     {
         write (1, &dest[i], 1);
         i++;
-    }*/
+    }*//*
     printf("%zu", ft_strlcpy(dest, src, size));
     printf("%s%s", "\n", dest);
     return(0);
 }
+*/

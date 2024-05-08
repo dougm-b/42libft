@@ -6,7 +6,7 @@
 /*   By: domoreir <domoreir@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/02 00:45:16 by domoreir          #+#    #+#             */
-/*   Updated: 2024/05/06 23:22:01 by domoreir         ###   ########.fr       */
+/*   Updated: 2024/05/08 20:59:24 by domoreir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,6 +69,7 @@ char *ft_strtrim(char const *s1, char const *set)
     }
     str = (char *) malloc(str * sizeof(char))
 */
+/*
 int main(void)
 {
     char const *s1="        Teste para a ft_strtrim.c       ";
@@ -76,7 +77,7 @@ int main(void)
     printf("%s", ft_strtrim(s1, set));
     return(0);
 }
-
+*/
 /* 1- medir ate onde vai o set no inicio, medir set no fim, 
 quardar posiçao que parou no começo. 
 retornar restante menos o fim com nulo

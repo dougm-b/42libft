@@ -6,7 +6,7 @@
 /*   By: domoreir <domoreir@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/01 23:01:45 by domoreir          #+#    #+#             */
-/*   Updated: 2024/05/01 23:29:49 by domoreir         ###   ########.fr       */
+/*   Updated: 2024/05/08 20:58:07 by domoreir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,10 +31,10 @@ char    *ft_strdup(const char *s1)
     str[i] = '\0';
     return(str);
 }
-
+/*
 int main(void)
 {
     const char  *s1="Teste ft_strdup";
     printf("%s", ft_strdup(s1));
     return(0);
-}
+}*/

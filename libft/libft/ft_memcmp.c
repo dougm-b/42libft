@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: domoreir <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: domoreir <domoreir@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 16:27:33 by domoreir          #+#    #+#             */
-/*   Updated: 2024/04/11 16:27:36 by domoreir         ###   ########.fr       */
+/*   Updated: 2024/05/08 20:56:40 by domoreir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	}
 	return (0);
 }
-
+/*
 int	main(void)
 {
 	const char	*s1;
@@ -42,3 +42,4 @@ int	main(void)
 	printf("%d", ft_memcmp(s1, s2, n));
 	return (0);
 }
+*/

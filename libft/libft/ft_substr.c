@@ -6,7 +6,7 @@
 /*   By: domoreir <domoreir@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/01 23:30:53 by domoreir          #+#    #+#             */
-/*   Updated: 2024/05/02 00:31:49 by domoreir         ###   ########.fr       */
+/*   Updated: 2024/05/08 20:59:31 by domoreir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ char *ft_substr(char const *s, unsigned int start, size_t len)
 	ft_strlcpy(cont, s + start, len + 1);
 	return (cont);
 }
-
+/*
 int main(void)
 {
     char const *s= "domeir@Teste para ft_substr da libft.";
@@ -40,3 +40,4 @@ int main(void)
     printf("%s", ft_substr(s, start, len));
     return (0);
 }
+*/

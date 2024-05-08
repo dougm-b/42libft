@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: domoreir <domoreir@student.42.fr>          +#+  +:+       +#+        */
+/*   By: domoreir <domoreir@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 16:28:22 by domoreir          #+#    #+#             */
-/*   Updated: 2024/04/30 20:39:19 by domoreir         ###   ########.fr       */
+/*   Updated: 2024/05/08 21:01:20 by domoreir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ void *ft_memchr(const void *s, int c, size_t n)
 	}
 	return (0);
 }
-
+/*
 int main(void)
 {
     const char *s= "Olá, Domoreir";
@@ -42,4 +42,4 @@ int main(void)
     n = 10;
     printf("%p", ft_memchr(s, c, n));
     return(0);
-}
+}*/

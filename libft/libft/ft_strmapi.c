@@ -6,7 +6,7 @@
 /*   By: domoreir <domoreir@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/07 22:13:24 by domoreir          #+#    #+#             */
-/*   Updated: 2024/05/08 19:29:52 by domoreir         ###   ########.fr       */
+/*   Updated: 2024/05/08 20:58:55 by domoreir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,11 +39,11 @@ char test_function(unsigned int i, char c)
     c = c + i;
     return (c);
 }
-
+/*
 int main(void)
 {
     char const  *s = "Teste para a ft_strmapi";
     
     printf("%s", ft_strmapi(s, test_function));
     return (0);
-}
+}*/

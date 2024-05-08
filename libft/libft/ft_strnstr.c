@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: domoreir <domoreir@student.42.fr>          +#+  +:+       +#+        */
+/*   By: domoreir <domoreir@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 20:40:53 by domoreir          #+#    #+#             */
-/*   Updated: 2024/04/30 21:30:58 by domoreir         ###   ########.fr       */
+/*   Updated: 2024/05/08 20:59:09 by domoreir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ char *ft_strnstr(const char *big, const char *little, size_t len)
     }
     return(0);
 }
-
+/*
 int main(void)
 {
     const char  *big = "Teste para ft_strnstr";
@@ -41,4 +41,4 @@ int main(void)
 
     printf("%s", ft_strnstr(big, little, len));
     return(0);
-}
+}*/

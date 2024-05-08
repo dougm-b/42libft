@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: domoreir <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: domoreir <domoreir@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/10 20:46:42 by domoreir          #+#    #+#             */
-/*   Updated: 2024/04/10 20:46:46 by domoreir         ###   ########.fr       */
+/*   Updated: 2024/05/08 21:00:58 by domoreir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ size_t    ft_strcat(char  *dest, const char *src, size_t size)
     dest[f] = '\0';
     return(dest);*/
 }
-
+/*
 int main(void)
 {   
 	char    dest;
@@ -68,4 +68,4 @@ int main(void)
 	printf("%zu", dest);
 	printf("%s", "\n");
 	return(0);
-}
+}*/

@@ -6,7 +6,7 @@
 /*   By: domoreir <domoreir@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/08 18:03:47 by domoreir          #+#    #+#             */
-/*   Updated: 2024/05/08 18:39:08 by domoreir         ###   ########.fr       */
+/*   Updated: 2024/05/08 20:58:14 by domoreir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ void minha_funcao(unsigned int i, char *c)
 {
     *c = *c + i;
 }
-
+/*
 int main (void)
 {
     char  s[] = "Teste para a ft_striteri";
@@ -39,4 +39,4 @@ int main (void)
     ft_striteri(s, minha_funcao);
     printf("%s", s);
     return (0);
-}
+}*/
