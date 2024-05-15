@@ -6,9 +6,11 @@
 /*   By: domoreir <domoreir@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/01 22:47:17 by domoreir          #+#    #+#             */
-/*   Updated: 2024/05/01 23:01:27 by domoreir         ###   ########.fr       */
+/*   Updated: 2024/05/15 23:06:57 by domoreir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void    *ft_calloc(size_t count, size_t size)
 {

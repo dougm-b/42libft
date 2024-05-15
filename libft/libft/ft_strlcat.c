@@ -6,13 +6,42 @@
 /*   By: domoreir <domoreir@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/10 20:46:42 by domoreir          #+#    #+#             */
-/*   Updated: 2024/05/08 21:00:58 by domoreir         ###   ########.fr       */
+/*   Updated: 2024/05/15 23:09:35 by domoreir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include <stdlib.h>
 #include <stdio.h>
+#include <string.h>
+#include "libft.h"
 
+size_t  ft_strlcat(char *dest, const char *src, size_t size)
+{
+	size_t	i;
+	size_t	j;
+	size_t	dest_len;
+	size_t	src_len;
+
+	src_len = strlen(src);
+	dest_len = strlen(dest);
+	j = dest_len;
+	i = 0;
+	if (dest_len < size - 1 && size > 0)
+	{
+		while (src[i] && dest_len + i < size - 1)
+		{
+			dest[j] = src[i];
+			j++;
+			i++;
+		}
+		dest[j] = 0;
+	}
+	if (dest_len >= size)
+		dest_len = size;
+	return (dest_len + src_len);
+}
+
+/*
 size_t    ft_strcat(char  *dest, const char *src, size_t size)
 {
     char    temp[100];
@@ -36,7 +65,7 @@ size_t    ft_strcat(char  *dest, const char *src, size_t size)
     }
     temp[f] = '\0';
     return(temp);
-    
+    */
     /*temp = *dest;
     i=0;
     f=0;
@@ -52,8 +81,8 @@ size_t    ft_strcat(char  *dest, const char *src, size_t size)
         i++;
     }
     dest[f] = '\0';
-    return(dest);*/
-}
+    return(dest);
+} */
 /*
 int main(void)
 {   
@@ -64,8 +93,8 @@ int main(void)
 	src = "Sempre";
 	dest = "Avante";
     
-	ft_strcat(dest, src, size);
-	printf("%zu", dest);
+	ft_strlcat(dest, src, size);
+	printf("%u", dest);
 	printf("%s", "\n");
 	return(0);
 }*/

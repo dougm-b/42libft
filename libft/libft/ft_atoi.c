@@ -3,15 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: domoreir <domoreir@studant.42porto.com>    +#+  +:+       +#+        */
+/*   By: domoreir <domoreir@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 20:40:43 by domoreir          #+#    #+#             */
-/*   Updated: 2024/05/01 22:45:55 by domoreir         ###   ########.fr       */
+/*   Updated: 2024/05/15 23:10:16 by domoreir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include <stdio.h>
+#include "libft.h"
+
 
 int ft_atoi(const char *nptr)
 {
@@ -39,10 +41,10 @@ int ft_atoi(const char *nptr)
     }
     return (result * signal);
 }
-
+/*
 int main(void)
 {
     const char  *nptr= "-111344553";
     printf("%d", ft_atoi(nptr));
     return(0);
-}
+}*/

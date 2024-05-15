@@ -6,9 +6,15 @@
 /*   By: domoreir <domoreir@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/08 19:45:03 by domoreir          #+#    #+#             */
-/*   Updated: 2024/05/08 19:48:34 by domoreir         ###   ########.fr       */
+/*   Updated: 2024/05/15 23:08:56 by domoreir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <stdlib.h>
+#include <stdio.h>
+#include <string.h>
+#include <unistd.h>
+#include "libft.h"
 
 void ft_putendl_fd(char *s, int fd)
 {

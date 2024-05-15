@@ -6,13 +6,14 @@
 /*   By: domoreir <domoreir@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/01 23:01:45 by domoreir          #+#    #+#             */
-/*   Updated: 2024/05/08 20:58:07 by domoreir         ###   ########.fr       */
+/*   Updated: 2024/05/15 23:09:15 by domoreir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
+#include "libft.h"
 
 char    *ft_strdup(const char *s1)
 {

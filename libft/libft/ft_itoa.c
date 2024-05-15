@@ -6,13 +6,14 @@
 /*   By: domoreir <domoreir@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/06 23:23:32 by domoreir          #+#    #+#             */
-/*   Updated: 2024/05/08 20:56:19 by domoreir         ###   ########.fr       */
+/*   Updated: 2024/05/15 23:07:25 by domoreir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
+#include "libft.h"
 
 int     ft_leni(int n)
 {

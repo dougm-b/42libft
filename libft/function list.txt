@@ -9,8 +9,8 @@
 • memcpy CHECK
 
 • memmove - Verificar diferenca pratica de memmove par memcopy
-• strlcpy 
-• strlcat 
+• strlcpy CHECK
+• strlcat CHECK
 • toupper CHECK
 • tolower CHECK
 • strchr CHECK
@@ -35,8 +35,10 @@ ft_strmapi CHECK
 ft_striteri CHECK
 ft_putchar_fd CHECK
 ft_putstr_fd CHECK
-ft_putendl_fd DOING
-ft_putnbr_fd DOING
+ft_putendl_fd CHECK
+ft_putnbr_fd CHECK
+
+Makefile CHECK
 
 Bonus Part
 ft_lstnew

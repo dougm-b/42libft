@@ -6,9 +6,15 @@
 /*   By: domoreir <domoreir@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/08 19:49:05 by domoreir          #+#    #+#             */
-/*   Updated: 2024/05/08 19:53:22 by domoreir         ###   ########.fr       */
+/*   Updated: 2024/05/15 23:09:00 by domoreir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <stdlib.h>
+#include <stdio.h>
+#include <string.h>
+#include <unistd.h>
+#include "libft.h"
 
 void ft_putnbr_fd(int n, int fd)
 {

@@ -6,13 +6,14 @@
 /*   By: domoreir <domoreir@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/02 00:32:32 by domoreir          #+#    #+#             */
-/*   Updated: 2024/05/08 20:58:20 by domoreir         ###   ########.fr       */
+/*   Updated: 2024/05/15 23:09:27 by domoreir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
+#include "libft.h"
 
 char *ft_strjoin(char const *s1, char const *s2)
 {

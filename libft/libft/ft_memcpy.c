@@ -6,10 +6,11 @@
 /*   By: domoreir <domoreir@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 16:28:43 by domoreir          #+#    #+#             */
-/*   Updated: 2024/05/08 20:56:52 by domoreir         ###   ########.fr       */
+/*   Updated: 2024/05/15 23:08:34 by domoreir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {

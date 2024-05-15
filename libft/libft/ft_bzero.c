@@ -3,15 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: domoreir <domoreir@student.42.fr>          +#+  +:+       +#+        */
+/*   By: domoreir <domoreir@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 19:18:29 by domoreir          #+#    #+#             */
-/*   Updated: 2024/04/30 19:29:40 by domoreir         ###   ########.fr       */
+/*   Updated: 2024/05/15 23:06:47 by domoreir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <strings.h>
+#include "libft.h"
 
 void ft_bzero(void *s, size_t n)
 {

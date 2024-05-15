@@ -6,12 +6,13 @@
 /*   By: domoreir <domoreir@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 16:28:22 by domoreir          #+#    #+#             */
-/*   Updated: 2024/05/08 21:01:20 by domoreir         ###   ########.fr       */
+/*   Updated: 2024/05/15 23:08:24 by domoreir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 #include <stdio.h>
+#include "libft.h"
 
 void *ft_memchr(const void *s, int c, size_t n)
 {
