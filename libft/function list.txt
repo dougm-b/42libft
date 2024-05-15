@@ -35,8 +35,8 @@ ft_strmapi CHECK
 ft_striteri CHECK
 ft_putchar_fd CHECK
 ft_putstr_fd CHECK
-ft_putendl_fd 
-ft_putnbr_fd 
+ft_putendl_fd DOING
+ft_putnbr_fd DOING
 
 Bonus Part
 ft_lstnew
