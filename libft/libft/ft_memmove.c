@@ -6,7 +6,7 @@
 /*   By: domoreir <domoreir@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 16:28:56 by domoreir          #+#    #+#             */
-/*   Updated: 2024/05/15 23:08:41 by domoreir         ###   ########.fr       */
+/*   Updated: 2024/05/17 21:26:28 by domoreir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,8 @@ void *ft_memmove(void *dest, const void *src, size_t n)
 
 	d = (char *)dest;
 	s = (const char *)src;
-	if (d == NULL || s == NULL)
-		return (NULL);
+	if (d == s)
+		return (dest);
 	if (d < s)
 	{
 		while (n--)
@@ -44,13 +44,13 @@ void *ft_memmove(void *dest, const void *src, size_t n)
 	unsigned char	*d = dest;
 	const unsigned char	*s = src;
 	int	i;
-	
+
 	i = 0;
 	while (i < (int) n)
 	{
 		d[i] = s[i];
 		i++;
-	} 
+	}
 	return (0);
 } *//*
 
@@ -59,8 +59,8 @@ int	main(void)
 	char	*dest;
 	char	*src;
 	size_t	n;
-	
-	
+
+
 	src = "Agora tudo está a correr bem." ;
 	n = strlen(src) + 1;
 	dest = src + 1;
@@ -71,13 +71,13 @@ int	main(void)
 /*
 int main (void)
 {
-         char src[] = "lorem ipsum qualquer coisa";
-         char *dest;
+	char src[] = "lorem ipsum qualquer coisa";
+	char *dest;
          //char test[] = "con\0sec\0\0te\0tur";
 
-         dest = src + 1;
-         ft_memmove(dest, src, 8);
-		 printf("%p", ft_memmove(dest, src, 8));
+	dest = src + 1;
+	ft_memmove(dest, src, 8);
+	printf("%p", ft_memmove(dest, src, 8));
          //write(1, dest, 22);
 }
 */

@@ -6,7 +6,7 @@
 /*   By: domoreir <domoreir@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 20:40:43 by domoreir          #+#    #+#             */
-/*   Updated: 2024/05/15 23:10:16 by domoreir         ###   ########.fr       */
+/*   Updated: 2024/05/17 22:37:59 by domoreir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int ft_atoi(const char *nptr)
     signal = 1;
     result = 0;
     if (nptr == NULL)
-        return(0);
+        return (0);
     while (nptr[i] == '\t' || nptr[i] == '\n' || nptr[i] == '\v' ||
 			nptr[i] == '\f' || nptr[i] == '\r' || nptr[i] == ' ')
 		i++;
@@ -35,16 +35,19 @@ int ft_atoi(const char *nptr)
             signal = -1;
         i++;
     }
-    while ((nptr[i] >= '0') && (nptr[i] <= '9'))  
+    if (nptr[i] > 47)
     {
-        result = (result * 10) + (nptr[i++] - '0');
+        while ((nptr[i] >= '0') && (nptr[i] <= '9'))
+        {
+            result = (result * 10) + (nptr[i++] - '0');
+        }
     }
     return (result * signal);
 }
-/*
+
 int main(void)
 {
-    const char  *nptr= "-111344553";
+    const char  *nptr= "+ 111344553";
     printf("%d", ft_atoi(nptr));
     return(0);
-}*/
+}

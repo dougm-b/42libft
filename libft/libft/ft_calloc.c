@@ -6,7 +6,7 @@
 /*   By: domoreir <domoreir@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/01 22:47:17 by domoreir          #+#    #+#             */
-/*   Updated: 2024/05/15 23:06:57 by domoreir         ###   ########.fr       */
+/*   Updated: 2024/05/17 19:47:28 by domoreir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,11 @@
 void    *ft_calloc(size_t count, size_t size)
 {
     void    *ptr;
-    
+
     ptr = (void *) malloc(count * size);
     if (ptr != NULL)
         ft_bzero(ptr, count * size);
-    return(ptr);
+    return (ptr);
 }
 /*
 int main(void)

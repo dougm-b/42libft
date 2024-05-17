@@ -6,7 +6,7 @@
 /*   By: domoreir <domoreir@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/06 23:23:32 by domoreir          #+#    #+#             */
-/*   Updated: 2024/05/15 23:07:25 by domoreir         ###   ########.fr       */
+/*   Updated: 2024/05/17 19:47:56 by domoreir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,12 @@
 int     ft_leni(int n)
 {
     size_t  count;
-    
+
     count = 0;
     if (n == 0)
     {
         count = 1;
-        return(count);
+        return (count);
     }
     while (n != 0)
     {
