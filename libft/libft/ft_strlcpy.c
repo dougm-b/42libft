@@ -6,13 +6,14 @@
 /*   By: domoreir <domoreir@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/10 20:47:01 by domoreir          #+#    #+#             */
-/*   Updated: 2024/05/15 22:01:33 by domoreir         ###   ########.fr       */
+/*   Updated: 2024/05/16 00:49:48 by domoreir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
+#include "libft.h"
 
 size_t  ft_strlcpy (char *dst, const char *src, size_t size)
 {
@@ -59,7 +60,7 @@ int main(void)
     //dest = "";
     size = 3;
     //ft_strlcpy(dest, src, size);
-   /* i = 0;
+    i = 0;
     while (dest[i] !='\0')
     {
         write (1, &dest[i], 1);

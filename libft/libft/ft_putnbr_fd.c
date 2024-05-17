@@ -6,7 +6,7 @@
 /*   By: domoreir <domoreir@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/08 19:49:05 by domoreir          #+#    #+#             */
-/*   Updated: 2024/05/15 23:09:00 by domoreir         ###   ########.fr       */
+/*   Updated: 2024/05/16 00:20:52 by domoreir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,20 +21,20 @@ void ft_putnbr_fd(int n, int fd)
     int	c;
 
 	c = 0;
-	if (nb == -2147483648)
+	if (n == -2147483648)
 		write(1, "-2147483648", 11);
-	if (nb <= 2147483647 && nb > -2147483648)
+	if (n <= 2147483647 && n > -2147483648)
 	{
-		if (nb < 0)
+		if (n < 0)
 		{
 			write(1, "-", 1);
-			nb = -nb;
+			n = -n;
 		}
-		if (nb > 9)
+		if (n > 9)
 		{
-			ft_putnbr(nb / 10);
+			ft_putnbr_fd(n / 10, fd);
 		}
-		c = nb % 10 + '0';
-		write (1, &c, 1);
+		c = n % 10 + '0';
+		write (fd, &c, 1);
 	}
 }

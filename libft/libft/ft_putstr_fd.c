@@ -6,7 +6,7 @@
 /*   By: domoreir <domoreir@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/08 19:33:15 by domoreir          #+#    #+#             */
-/*   Updated: 2024/05/15 23:09:05 by domoreir         ###   ########.fr       */
+/*   Updated: 2024/05/16 00:52:14 by domoreir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void ft_putstr_fd(char *s, int fd)
     i = 0;
     while (s[i] != '\0')
     {
-        write (fd, &i, 1):
+        write (fd, &i, 1);
         i++;
     }
 }

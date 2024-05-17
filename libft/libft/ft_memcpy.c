@@ -6,7 +6,7 @@
 /*   By: domoreir <domoreir@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 16:28:43 by domoreir          #+#    #+#             */
-/*   Updated: 2024/05/15 23:08:34 by domoreir         ###   ########.fr       */
+/*   Updated: 2024/05/16 01:11:41 by domoreir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,20 @@
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	unsigned char	*d = dest;
-	const unsigned char	*s = src;
+	unsigned char	*d;
+	const unsigned char	*s;
 	int	i;
-	
+
+	if ( dest == NULL && src == NULL)
+		return (NULL);	
+	d = (unsigned char *)dest;
+	s = (unsigned char *)src;
 	i = 0;
 	while(i < (int) n)
 	{
 		d[i] = s[i];
 		i++;
 	}
-	printf("%s", d);
 	return (d);
 }
 /*

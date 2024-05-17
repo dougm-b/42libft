@@ -6,13 +6,14 @@
 /*   By: domoreir <domoreir@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/01 23:30:53 by domoreir          #+#    #+#             */
-/*   Updated: 2024/05/08 20:59:31 by domoreir         ###   ########.fr       */
+/*   Updated: 2024/05/16 00:51:24 by domoreir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
+#include "libft.h"
 
 char *ft_substr(char const *s, unsigned int start, size_t len)
 {

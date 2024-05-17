@@ -6,12 +6,13 @@
 /*   By: domoreir <domoreir@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/10 20:48:14 by domoreir          #+#    #+#             */
-/*   Updated: 2024/05/08 20:59:38 by domoreir         ###   ########.fr       */
+/*   Updated: 2024/05/16 00:50:26 by domoreir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 #include <stdio.h>
+#include "libft.h"
 
 int	ft_toupper(int c)
 {

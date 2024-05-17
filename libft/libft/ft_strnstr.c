@@ -6,12 +6,13 @@
 /*   By: domoreir <domoreir@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 20:40:53 by domoreir          #+#    #+#             */
-/*   Updated: 2024/05/08 20:59:09 by domoreir         ###   ########.fr       */
+/*   Updated: 2024/05/16 00:50:08 by domoreir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 #include <stdio.h>
+#include "libft.h"
 
 char *ft_strnstr(const char *big, const char *little, size_t len)
 {

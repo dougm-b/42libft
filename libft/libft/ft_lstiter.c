@@ -6,8 +6,19 @@
 /*   By: domoreir <domoreir@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/15 23:04:45 by domoreir          #+#    #+#             */
-/*   Updated: 2024/05/15 23:07:51 by domoreir         ###   ########.fr       */
+/*   Updated: 2024/05/17 17:01:45 by domoreir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+void	ft_lstiter(t_list *lst, void (*f)(void *))
+{
+	if (f == NULL || lst == NULL)
+		return ;
+	while (lst != NULL)
+	{
+		f(lst -> content);
+		lst = lst ->next;
+	}
+}
