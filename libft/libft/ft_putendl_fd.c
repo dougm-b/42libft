@@ -6,7 +6,7 @@
 /*   By: domoreir <domoreir@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/08 19:45:03 by domoreir          #+#    #+#             */
-/*   Updated: 2024/05/16 00:55:30 by domoreir         ###   ########.fr       */
+/*   Updated: 2024/05/18 16:48:21 by domoreir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void ft_putendl_fd(char *s, int fd)
     i = 0;
     while (s[i] != '\0')
     {
-        write (fd, &i, 1);
+        write (fd, &s[i], 1);
         i++;
     }
     write (fd, "\n", 1);

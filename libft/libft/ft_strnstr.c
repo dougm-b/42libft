@@ -6,7 +6,7 @@
 /*   By: domoreir <domoreir@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 20:40:53 by domoreir          #+#    #+#             */
-/*   Updated: 2024/05/16 00:50:08 by domoreir         ###   ########.fr       */
+/*   Updated: 2024/05/18 15:11:24 by domoreir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,12 @@ char *ft_strnstr(const char *big, const char *little, size_t len)
 {
     size_t  i;
     size_t  little_len;
-    
+
     i=0;
     little_len = strlen(little);
     if (len == 0)
         return ((char *)big);
-    
+
     while(big[i] && len >= little_len)
     {
         if(memcmp(&big[i], little, little_len) == 0)

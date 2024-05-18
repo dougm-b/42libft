@@ -6,7 +6,7 @@
 /*   By: domoreir <domoreir@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/02 00:32:32 by domoreir          #+#    #+#             */
-/*   Updated: 2024/05/15 23:09:27 by domoreir         ###   ########.fr       */
+/*   Updated: 2024/05/18 18:36:50 by domoreir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char *ft_strjoin(char const *s1, char const *s2)
     unsigned char   i;
     unsigned char   f;
     char    *str;
-    
+
     i=0;
     f=0;
     str = (char *) malloc((strlen(s1)+strlen(s2)+1) * sizeof(char));
