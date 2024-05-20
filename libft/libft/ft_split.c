@@ -6,7 +6,7 @@
 /*   By: domoreir <domoreir@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/16 00:47:43 by domoreir          #+#    #+#             */
-/*   Updated: 2024/05/20 18:52:48 by domoreir         ###   ########.fr       */
+/*   Updated: 2024/05/20 20:14:55 by domoreir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,77 +15,87 @@
 #include <stdlib.h>
 #include <string.h>
 
-// Função para contar quantos tokens serão gerados
-int ctok(const char* s, const char* c) {
-    int ntok = 0;
-    const char* temp = s;
-    size_t delimLen = strlen(c);
 
-    while ((temp = strstr(temp, c)) != NULL) {
+int ft_ctok(const char* s, const char c)
+{
+    int         ntok;
+    const char* temp;
+    size_t      delimlen;
+
+    ntok = 0;
+    temp = s;
+    delimlen = ft_strlen(c);
+    while ((temp = ft_strnstr(temp, c, ft_strlen(temp))) != NULL)
+    {
         ntok++;
-        temp += delimLen;
+        temp = temp + delimlen;
     }
-    return (ntok + 1); // +1 para o último token
+    return (ntok + 1);
 }
 
-// Função para copiar uma substring de start até end-1
-char* substring(const char* start, const char* end) {
-    size_t len = end - start;
-    char* substr = (char*)malloc((len + 1) * sizeof(char)); // +1 para o terminador nulo
-    if (substr == NULL) {
+char* ft_substring(const char* start, const char* end)
+{
+    size_t  len;
+    char*   substr;
+
+    len = end - start;
+    substr = (char*)malloc((len + 1) * sizeof(char));
+    if (substr == NULL)
         return NULL;
-    }
-    strncpy(substr, start, len);
+    ft_strlcpy(substr, start, len);
     substr[len] = '\0';
-    return substr;
+    return (substr);
 }
 
-// Função para tokenizar a string e armazenar os tokens
-int tokenizeString(char** tokens, const char* s, const char* c) {
-    const char* start = s;
+
+int ft_tokstr(char** tokens, const char* s, const char* c)
+{
+    const char* start;
     const char* end;
-    int idx = 0;
-    size_t delimLen = strlen(c);
+    int i;
+    size_t delimlen;
 
-    while ((end = strstr(start, c)) != NULL) {
-        tokens[idx] = substring(start, end);
-        if (tokens[idx] == NULL) {
+    start = s;
+    i = 0;
+    delimlen = ft_strlen(c);
+    while ((end = ft_strnstr(start, c, ft_strlen(start))) != NULL)
+    {
+        tokens[i] = ft_substring(start, end);
+        if (tokens[i] == NULL)
             return 1;
-        }
-        idx++;
-        start = end + delimLen;
+        i++;
+        start = end + delimlen;
     }
-    tokens[idx] = strdup(start); // Último token
-    if (tokens[idx] == NULL) {
+    tokens[i] = ft_strdup(start);
+    if (tokens[i] == NULL)
         return 1;
-    }
-    tokens[++idx] = NULL;
-    return 0;
+    tokens[++i] = NULL;
+    return (0);
 }
 
-// Define a função split
-char** split(const char* s, const char* c) {
-    int ntok = ctok(s, c);
+char** ft_split(const char* s, const char c)
+{
+    int ntok;
 
-    char** tokens = (char**)malloc((ntok + 1) * sizeof(char*)); // +1 para o token final NULL
-    if (tokens == NULL) {
+    ntok = ft_ctok(s, c);
+    char** tokens = (char**)malloc((ntok + 1) * sizeof(char*));
+    if (tokens == NULL)
         return NULL;
-    }
-
-    if (tokenizeString(tokens, s, c) != 0) {
+    if (ft_tokstr(tokens, s, c) != 0)
+    {
         free(tokens);
-        return NULL;
+        return (NULL);
     }
-    return tokens;
+    return (tokens);
 }
-
+/*
 int main(void)
 {
     char const  *s = "um,dois,tres,quatro,cinco";
     char        c ",";
     char        **param;
     int         x;
-    
+
     i= 0;
     param = ft_split(s, c);
     while (param[x] != NULL)
@@ -93,7 +103,7 @@ int main(void)
         printf("%s", param[x]);
         x++;
     }
-    //
     printf("%s", ft_split(s, c));
     return(0);
 }
+*/
