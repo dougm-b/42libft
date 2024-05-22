@@ -6,7 +6,7 @@
 /*   By: domoreir <domoreir@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/01 23:30:53 by domoreir          #+#    #+#             */
-/*   Updated: 2024/05/16 00:51:24 by domoreir         ###   ########.fr       */
+/*   Updated: 2024/05/22 22:47:20 by domoreir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,8 +37,9 @@ int main(void)
     char const *s= "domeir@Teste para ft_substr da libft.";
     unsigned int start= 7;
     size_t len =20;
-    
+
     printf("%s", ft_substr(s, start, len));
+	ft_substr("hola", 4294967295, 0); funcao que deu em erro 
     return (0);
 }
 */

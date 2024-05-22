@@ -6,7 +6,7 @@
 /*   By: domoreir <domoreir@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/10 20:42:26 by domoreir          #+#    #+#             */
-/*   Updated: 2024/05/17 21:55:06 by domoreir         ###   ########.fr       */
+/*   Updated: 2024/05/22 22:36:01 by domoreir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,21 @@
 #include "libft.h"
 
 char	*ft_strchr(const char *s, int c)
+{
+	char	cc;
+
+	cc = (char)c;
+	while (*s)
+	{
+		if (*s == cc)
+			return ((char *)s);
+		s++;
+	}
+	if (cc == '\0')
+		return ((char *)s);
+	return (NULL);
+}
+/* char	*ft_strchr(const char *s, int c)
 {
 	int	i;
 	char	cc;
@@ -32,8 +47,9 @@ char	*ft_strchr(const char *s, int c)
 	if (cc == 0)
 		return ((char *)s + i);
 	return (NULL);
-}
-/*int	main(void)
+} */
+
+/* int	main(void)
 {
 	int	c;
 	const char	*s;
@@ -41,5 +57,10 @@ char	*ft_strchr(const char *s, int c)
 	c = '\0';
 	s = "post @domoreir: Agora foi!";
 	printf("%s",ft_strchr(s, c));
+	printf("%d", '\n');
+	printf("%s",ft_strchr((0x560bf20580a6, 357)));
+	printf("%d", '\n');
+	printf("%s",strchr((0x560bf20580a6, 357)));
+	printf("%d", '\n');
 	return(0);
-}*/
+} */

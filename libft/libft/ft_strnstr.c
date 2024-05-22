@@ -6,7 +6,7 @@
 /*   By: domoreir <domoreir@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 20:40:53 by domoreir          #+#    #+#             */
-/*   Updated: 2024/05/18 15:11:24 by domoreir         ###   ########.fr       */
+/*   Updated: 2024/05/22 22:25:50 by domoreir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,13 +20,16 @@ char *ft_strnstr(const char *big, const char *little, size_t len)
     size_t  little_len;
 
     i=0;
-    little_len = strlen(little);
+    little_len = ft_strlen(little);
+
+    if (little[i] == 0)
+        return ((char *)&big[i]);
     if (len == 0)
-        return ((char *)big);
+        return (NULL);
 
     while(big[i] && len >= little_len)
     {
-        if(memcmp(&big[i], little, little_len) == 0)
+        if(ft_memcmp(&big[i], little, little_len) == 0)
             return((char *)&big[i]);
         i++;
         len--;
@@ -36,10 +39,20 @@ char *ft_strnstr(const char *big, const char *little, size_t len)
 /*
 int main(void)
 {
-    const char  *big = "Teste para ft_strnstr";
-    const char  *little = "para";
+    const char  *big = "Teste para ft_strnstra";
+    const char  *little = "ara";
     size_t      len = 15;
 
+    const char  *big = "lorem ipsum dolor sit amet";
+    const char  *little = "ipsum";
+    size_t      len = 0;
+
+
     printf("%s", ft_strnstr(big, little, len));
+    printf("%s", "\n");
+    printf("%s", strstr(big, little));
+    printf("%s", "\n");
     return(0);
-}*/
+}
+
+ */

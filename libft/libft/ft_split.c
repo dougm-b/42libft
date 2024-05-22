@@ -6,7 +6,7 @@
 /*   By: domoreir <domoreir@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/16 00:47:43 by domoreir          #+#    #+#             */
-/*   Updated: 2024/05/20 20:14:55 by domoreir         ###   ########.fr       */
+/*   Updated: 2024/05/22 22:21:00 by domoreir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,60 +15,119 @@
 #include <stdlib.h>
 #include <string.h>
 
-
 int ft_ctok(const char* s, const char c)
 {
-    int         ntok;
-    const char* temp;
-    size_t      delimlen;
+    int word;
+    int nword;
 
-    ntok = 0;
-    temp = s;
-    delimlen = ft_strlen(c);
-    while ((temp = ft_strnstr(temp, c, ft_strlen(temp))) != NULL)
+    word = 0;
+    nword = 0;
+    while (*s)
     {
-        ntok++;
-        temp = temp + delimlen;
+        if (*s != c && nword == 0)
+        {
+            nword = 1;
+            word++;
+        }
+        else if (*s == c)
+        {
+            nword = 0;
+        }
+        s++;
     }
-    return (ntok + 1);
+    return (word);
 }
 
 char* ft_substring(const char* start, const char* end)
 {
     size_t  len;
     char*   substr;
+    char*   temp;
 
     len = end - start;
     substr = (char*)malloc((len + 1) * sizeof(char));
     if (substr == NULL)
         return NULL;
-    ft_strlcpy(substr, start, len);
-    substr[len] = '\0';
+
+    temp = substr;
+    while (start != end)
+    {
+        *temp++ = *start++;
+    }
+
+    *temp = '\0';
     return (substr);
 }
 
-
-int ft_tokstr(char** tokens, const char* s, const char* c)
+int ft_tokstr(char** tokens, const char* s, const char c)
 {
     const char* start;
     const char* end;
     int i;
-    size_t delimlen;
 
     start = s;
     i = 0;
-    delimlen = ft_strlen(c);
-    while ((end = ft_strnstr(start, c, ft_strlen(start))) != NULL)
+    while (*start)
+    {
+        while (*start == c)
+            start++;
+        if (*start == '\0')
+            break;
+        end = start;
+        while (*end != c && *end != '\0')
+            end++;
+        tokens[i] = ft_substring(start, end);
+        if (tokens[i] == NULL)
+            return (1);
+        i++;
+        start = end;
+    }
+    tokens[i] = NULL;
+    return (0);
+}
+
+char** ft_split(const char* s, const char c)
+{
+    int ntok;
+    char** tokens;
+
+    if (s == NULL)
+        return NULL;
+
+    ntok = ft_ctok(s, c);
+    tokens = (char**)malloc((ntok + 1) * sizeof(char*));
+    if (tokens == NULL)
+        return NULL;
+
+    if (ft_tokstr(tokens, s, c) != 0)
+    {
+        free(tokens);
+        return (NULL);
+    }
+    return (tokens);
+}
+
+/* int ft_tokstr(char** tokens, const char* s, const char c)
+{
+    const char* start;
+    const char* end;
+    int i;
+
+    start = s;
+    i = 0;
+    while ((end = ft_strchr(start, c)) != NULL)
     {
         tokens[i] = ft_substring(start, end);
         if (tokens[i] == NULL)
-            return 1;
+            return (1);
         i++;
-        start = end + delimlen;
+        start = end + 1;
     }
     tokens[i] = ft_strdup(start);
     if (tokens[i] == NULL)
-        return 1;
+    {
+        return (1);
+    }
     tokens[++i] = NULL;
     return (0);
 }
@@ -87,23 +146,39 @@ char** ft_split(const char* s, const char c)
         return (NULL);
     }
     return (tokens);
-}
-/*
-int main(void)
+} */
+
+/* int main(void)
 {
     char const  *s = "um,dois,tres,quatro,cinco";
-    char        c ",";
+    char        c = ",";
     char        **param;
     int         x;
 
-    i= 0;
+    x= 0;
     param = ft_split(s, c);
     while (param[x] != NULL)
     {
-        printf("%s", param[x]);
+        printf("%s", **param[x]);
         x++;
     }
     printf("%s", ft_split(s, c));
     return(0);
-}
-*/
+} */
+
+/* int	main()
+{
+	char const *str = "   lorem   ipsum dolor     sit amet, consectetur   adipiscing elit. Sed non risus. Suspendisse   ";
+    char **result = ft_split(str, ' ');
+    int i;
+
+    i = 0;
+    if (result == NULL)
+        return 1;
+    while (result)
+    {
+        printf("%s\n", result[i]);
+        i++;
+    }
+	return (0);
+} */
