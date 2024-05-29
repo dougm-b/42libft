@@ -6,7 +6,7 @@
 /*   By: domoreir <domoreir@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/01 23:30:53 by domoreir          #+#    #+#             */
-/*   Updated: 2024/05/22 22:47:20 by domoreir         ###   ########.fr       */
+/*   Updated: 2024/05/29 19:15:04 by domoreir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,15 @@
 char *ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*cont;
+	unsigned int	slen;
 
+	slen = ft_strlen(s);
 	if (s == NULL)
 		return (0);
+
+	if (start > slen)
+		return (ft_strdup(""));
+
 	if (ft_strlen(s) < start)
 		len = 0;
 	if (ft_strlen(s + start) < len)
@@ -31,15 +37,18 @@ char *ft_substr(char const *s, unsigned int start, size_t len)
 	ft_strlcpy(cont, s + start, len + 1);
 	return (cont);
 }
-/*
-int main(void)
+
+/*int main(void)
 {
     char const *s= "domeir@Teste para ft_substr da libft.";
     unsigned int start= 7;
     size_t len =20;
 
     printf("%s", ft_substr(s, start, len));
-	ft_substr("hola", 4294967295, 0); funcao que deu em erro 
+	printf("%s", ft_substr("hola", 4294967295, 0));
+
+	//ft_substr("hola", 4294967295, 0);
+	//substr("hola", 4294967295, 0);
     return (0);
-}
-*/
+}*/
+

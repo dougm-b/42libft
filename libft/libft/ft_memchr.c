@@ -10,8 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdio.h>
 #include "libft.h"
 
 // void *ft_memchr(const void *s, int c, size_t n)
@@ -32,9 +30,7 @@
 // 	}
 // 	return (0);
 // }
-
-
-void *ft_memchr(const void *s, int c, size_t n)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
 	while (n--)
 	{
@@ -44,10 +40,6 @@ void *ft_memchr(const void *s, int c, size_t n)
 	}
 	return (0);
 }
-
-
-
-
 /*
 int main(void)
 {
