@@ -10,23 +10,18 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <stdio.h>
-#include <string.h>
 #include "libft.h"
 
-char *ft_substr(char const *s, unsigned int start, size_t len)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char	*cont;
+	char			*cont;
 	unsigned int	slen;
 
 	slen = ft_strlen(s);
 	if (s == NULL)
 		return (0);
-
 	if (start > slen)
 		return (ft_strdup(""));
-
 	if (ft_strlen(s) < start)
 		len = 0;
 	if (ft_strlen(s + start) < len)
@@ -37,7 +32,6 @@ char *ft_substr(char const *s, unsigned int start, size_t len)
 	ft_strlcpy(cont, s + start, len + 1);
 	return (cont);
 }
-
 /*int main(void)
 {
     char const *s= "domeir@Teste para ft_substr da libft.";
@@ -51,4 +45,3 @@ char *ft_substr(char const *s, unsigned int start, size_t len)
 	//substr("hola", 4294967295, 0);
     return (0);
 }*/
-

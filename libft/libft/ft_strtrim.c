@@ -10,46 +10,75 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <stdio.h>
-#include <string.h>
 #include "libft.h"
 
-char *ft_strtrim(char const *s1, char const *set)
+char	ft_trimval(char str, char strset, unsigned int start, unsigned int end, char trimmed)
 {
-    char            *str;
-    unsigned int    start;
-    unsigned int    end;
-    char            *trimmed;
-    char            *strset;
-
-    str = (char *)s1;
-    strset = (char *)set;
-    start = 0;
-    end = strlen(s1) - 1;
-    if (!str || !strset)
-        return (NULL);
-    if (ft_strlen(str) == 0)
-        return (ft_strdup(""));
-    if (ft_strlen(strset) == 0)
-        return(ft_strdup(str));
-    while(str[start] != '\0' && ft_strchr(set, str[start]))
-    {
-        start++;
-    }
-    while(end > start && ft_strchr(set, str[end]))
-    {
-        end--;
-    }
-    trimmed = (char *)malloc(end - start + 2);
-    if(trimmed == NULL)
-    {
-        return NULL;
-    }
-    strncpy(trimmed, &str[start], end - start + 1);
-    trimmed[end - start + 1] = '\0';
-    return (trimmed);
+	while (str[start] != '\0' && ft_strchr(set, str[start]))
+		start++;
+	while (end > start && ft_strchr(set, str[end]))
+		end--;
+	trimmed = (char *)malloc(end - start + 2);
+	if (trimmed == NULL)
+		return (NULL);
+	ft_memcpy(trimmed, &str[start], end - start + 1);
+	trimmed[end - start + 1] = '\0';
+	return (trimmed);
 }
+
+char	*ft_strtrim(char const *s1, char const *set)
+{
+	char			*str;
+	unsigned int	start;
+	unsigned int	end;
+	char			*trimmed;
+	char			*strset;
+	char			res;
+	
+	str = (char *)s1;
+	strset = (char *)set;
+	start = 0;
+	end = ft_strlen(s1) - 1;
+	if (!str || !strset)
+		return (NULL);
+	if (ft_strlen(str) == 0)
+		return (ft_strdup(""));
+	if (ft_strlen(strset) == 0)
+		return (ft_strdup(str));
+	res = ft_trimval(char str, char strset, unsigned int start, unsigned int end, char trimmed)
+	return(res);
+}
+/*char	*ft_strtrim(char const *s1, char const *set)
+{
+	char			*str;
+	unsigned int	start;
+	unsigned int	end;
+	char			*trimmed;
+	char			*strset;
+
+	str = (char *)s1;
+	strset = (char *)set;
+	start = 0;
+	end = ft_strlen(s1) - 1;
+	if (!str || !strset)
+		return (NULL);
+	if (ft_strlen(str) == 0)
+		return (ft_strdup(""));
+	if (ft_strlen(strset) == 0)
+		return (ft_strdup(str));
+	while (str[start] != '\0' && ft_strchr(set, str[start]))
+		start++;
+	while (end > start && ft_strchr(set, str[end]))
+		end--;
+	trimmed = (char *)malloc(end - start + 2);
+	if (trimmed == NULL)
+		return (NULL);
+	ft_memcpy(trimmed, &str[start], end - start + 1);
+	trimmed[end - start + 1] = '\0';
+	return (trimmed);
+}*/
+
+
 /*    while(str[start] != '\0' && strchr(set, str[start]))
     {
         start++;
@@ -61,7 +90,7 @@ char *ft_strtrim(char const *s1, char const *set)
     trimmed = substr(str, start, strlen(str) -start -(strlen(str) -end));
     return (trimmed);
 } */
- /*   while(str[end] !)
+/*   while(str[end] !)
 
     unsigned char   i;
     unsigned char   f;
@@ -77,7 +106,6 @@ char *ft_strtrim(char const *s1, char const *set)
     }
     str = (char *) malloc(str * sizeof(char))
 */
-
 // int main(void)
 // {
 //     char const *s1="        Teste para a ft_strtrim.c       ";

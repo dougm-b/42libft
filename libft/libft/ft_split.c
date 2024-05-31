@@ -11,102 +11,110 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
 
-int ft_ctok(const char* s, const char c)
+static int	ft_ctok(const char *s, const char c)
 {
-    int word;
-    int nword;
+	int	word;
+	int	nword;
 
-    word = 0;
-    nword = 0;
-    while (*s)
-    {
-        if (*s != c && nword == 0)
-        {
-            nword = 1;
-            word++;
-        }
-        else if (*s == c)
-        {
-            nword = 0;
-        }
-        s++;
-    }
-    return (word);
+	word = 0;
+	nword = 0;
+	while (*s)
+	{
+		if (*s != c && nword == 0)
+		{
+			nword = 1;
+			word++;
+		}
+		else if (*s == c)
+		{
+			nword = 0;
+		}
+		s++;
+	}
+	return (word);
 }
 
-char* ft_substring(const char* start, const char* end)
+static char	*ft_substring(const char *start, const char *end)
 {
-    size_t  len;
-    char*   substr;
-    char*   temp;
+	size_t	len;
+	char	*substr;
+	char	*temp;
 
-    len = end - start;
-    substr = (char*)malloc((len + 1) * sizeof(char));
-    if (substr == NULL)
-        return NULL;
-
-    temp = substr;
-    while (start != end)
-    {
-        *temp++ = *start++;
-    }
-
-    *temp = '\0';
-    return (substr);
+	len = end - start;
+	substr = (char *) malloc((len + 1) * sizeof (char));
+	if (substr == NULL)
+		return (NULL);
+	temp = substr;
+	while (start != end)
+	{
+		*temp++ = *start++;
+	}
+	*temp = '\0';
+	return (substr);
 }
 
-int ft_tokstr(char** tokens, const char* s, const char c)
+static int	ft_tokstr(char **tokens, const char *s, const char c)
 {
-    const char* start;
-    const char* end;
-    int i;
+	const char	*start;
+	const char	*end;
+	int			i;
 
-    start = s;
-    i = 0;
-    while (*start)
-    {
-        while (*start == c)
-            start++;
-        if (*start == '\0')
-            break;
-        end = start;
-        while (*end != c && *end != '\0')
-            end++;
-        tokens[i] = ft_substring(start, end);
-        if (tokens[i] == NULL)
-            return (1);
-        i++;
-        start = end;
-    }
-    tokens[i] = NULL;
-    return (0);
+	start = s;
+	i = 0;
+	while (*start)
+	{
+		while (*start == c)
+			start++;
+		if (*start == '\0')
+			break ;
+		end = start;
+		while (*end != c && *end != '\0')
+			end++;
+		tokens[i] = ft_substring(start, end);
+		if (tokens[i] == NULL)
+			return (1);
+		i++;
+		start = end;
+	}
+	tokens[i] = NULL;
+	return (0);
 }
 
-char** ft_split(const char* s, const char c)
+static void	ft_freetokens(char **tokens)
 {
-    int ntok;
-    char** tokens;
+	unsigned int	i;
 
-    if (s == NULL)
-        return NULL;
-
-    ntok = ft_ctok(s, c);
-    tokens = (char**)malloc((ntok + 1) * sizeof(char*));
-    if (tokens == NULL)
-        return NULL;
-
-    if (ft_tokstr(tokens, s, c) != 0)
-    {
-        free(tokens);
-        return (NULL);
-    }
-    return (tokens);
+	i = 0;
+	while (tokens[i])
+	{
+		free(tokens[i]);
+		i++;
+	}
+	free(tokens);
 }
 
+char	**ft_split(const char *s, const char c)
+{
+	int		ntok;
+	char	**tokens;
+
+	if (s == NULL)
+		return (NULL);
+	ntok = ft_ctok(s, c);
+	tokens = (char **) malloc ((ntok + 1) * sizeof (char *));
+	if (tokens == NULL)
+	{
+		free(tokens);
+		return (NULL);
+	}
+	if (ft_tokstr(tokens, s, c) != 0)
+	{
+		ft_freetokens(tokens);
+		return (NULL);
+	}
+	return (tokens);
+}
 /* int ft_tokstr(char** tokens, const char* s, const char c)
 {
     const char* start;
@@ -126,7 +134,7 @@ char** ft_split(const char* s, const char c)
     tokens[i] = ft_strdup(start);
     if (tokens[i] == NULL)
     {
-        return (1);
+        return (1);xe2\x9a\xa0 :
     }
     tokens[++i] = NULL;
     return (0);
@@ -147,7 +155,6 @@ char** ft_split(const char* s, const char c)
     }
     return (tokens);
 } */
-
 /* int main(void)
 {
     char const  *s = "um,dois,tres,quatro,cinco";
@@ -165,10 +172,9 @@ char** ft_split(const char* s, const char c)
     printf("%s", ft_split(s, c));
     return(0);
 } */
-
 /* int	main()
 {
-	char const *str = "   lorem   ipsum dolor     sit amet, consectetur   adipiscing elit. Sed non risus. Suspendisse   ";
+	char const *str = "   lorem  , consectetur   Suspendisse   ";
     char **result = ft_split(str, ' ');
     int i;
 

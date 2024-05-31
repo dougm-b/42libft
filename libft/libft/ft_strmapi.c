@@ -15,9 +15,9 @@
 #include <string.h>
 #include "libft.h"
 
-char *ft_strmapi(char const *s, char (*f)(unsigned int, char))
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-    unsigned int	i;
+	unsigned int	i;
 	char			*str;
 
 	if (s == NULL)
@@ -35,10 +35,10 @@ char *ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	return (str);
 }
 
-char test_function(unsigned int i, char c)
+char	test_function(unsigned int i, char c)
 {
-    c = c + i;
-    return (c);
+	c = c + i;
+	return (c);
 }
 /*
 int main(void)

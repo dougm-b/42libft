@@ -10,12 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <stdio.h>
-#include <string.h>
 #include "libft.h"
 
-void *ft_memmove(void *dest, const void *src, size_t n)
+void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	char		*d;
 	const char	*s;
@@ -81,4 +78,3 @@ int main (void)
          //write(1, dest, 22);
 }
 */
-// A principal característica da função memmove() é que ela pode lidar com áreas de memória sobrepostas de maneira segura. Isso significa que você pode usar memmove() para mover bytes dentro de um único array ou entre dois arrays que podem se sobrepor. Por exemplo, se você quiser mover os primeiros 50 bytes de um array para uma posição diferente dentro do mesmo array, você pode usar a função memmove() da seguinte maneira: .......... memmove(&array[5], &array[0], 50);.............. Neste exemplo, os primeiros 50 caracteres do array serão movidos para começar na posição 5 do array.

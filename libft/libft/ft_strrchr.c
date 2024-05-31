@@ -10,15 +10,12 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <stdio.h>
-#include <string.h>
 #include "libft.h"
 
 char	*ft_strrchr(const char *s, int c)
 {
-	int i;
-	char cc;
+	int		i;
+	char	cc;
 
 	cc = (char)c;
 	i = 0;
@@ -26,14 +23,12 @@ char	*ft_strrchr(const char *s, int c)
 		i++;
 	if (cc == '\0')
 		return ((char *)s + i);
-
 	while (i >= 0)
 	{
 		if (s[i] == cc)
 			return ((char *)s + i);
 		i--;
 	}
-
 	return (NULL);
 }
 /* char	*ft_strrchr(const char *s, int c)

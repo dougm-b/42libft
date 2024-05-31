@@ -10,21 +10,19 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
-#include <stdio.h>
 #include "libft.h"
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	unsigned char	*source1;
 	unsigned char	*source2;
-	unsigned int    i;
-	unsigned int    f;
+	unsigned int	i;
+	unsigned int	f;
 
 	source1 = (unsigned char *) s1;
 	source2 = (unsigned char *) s2;
-	i=0;
-	f=0;
+	i = 0;
+	f = 0;
 	while (n != '\0' && (s1[i] != '\0' || s2[f] != '\0'))
 	{
 		if (source1[i] != source2[f])

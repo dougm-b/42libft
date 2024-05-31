@@ -10,27 +10,23 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <stdio.h>
-#include <string.h>
 #include "libft.h"
 
-void ft_striteri(char *s, void (*f)(unsigned int, char*))
+void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
-    unsigned int    i;
+	unsigned int	i;
 
-    i = 0;
-    while (s[i] != '\0')
-    {
-        f(i, &s[i]);
-    	//s[i] = f(i, &s[i]);
-        i++;
-    }
+	i = 0;
+	while (s[i] != '\0')
+	{
+		f(i, &s[i]);
+		i++;
+	}
 }
 
-void minha_funcao(unsigned int i, char *c)
+void	minha_funcao(unsigned int i, char *c)
 {
-    *c = *c + i;
+	*c = *c + i;
 }
 /*
 int main (void)
