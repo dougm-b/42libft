@@ -10,8 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <stdio.h>
 #include "libft.h"
 
 int	ft_tolower(int c)
@@ -24,13 +22,3 @@ int	ft_tolower(int c)
 	else
 		return (c);
 }
-/*
-int	main(void)
-{
-	int	c;
-	
-	c = '2';
-	ft_tolower(c);
-	printf("%c",ft_tolower(c));
-	return(0);
-}*/

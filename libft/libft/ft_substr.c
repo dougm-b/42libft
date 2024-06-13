@@ -32,16 +32,3 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	ft_strlcpy(cont, s + start, len + 1);
 	return (cont);
 }
-/*int main(void)
-{
-    char const *s= "domeir@Teste para ft_substr da libft.";
-    unsigned int start= 7;
-    size_t len =20;
-
-    printf("%s", ft_substr(s, start, len));
-	printf("%s", ft_substr("hola", 4294967295, 0));
-
-	//ft_substr("hola", 4294967295, 0);
-	//substr("hola", 4294967295, 0);
-    return (0);
-}*/

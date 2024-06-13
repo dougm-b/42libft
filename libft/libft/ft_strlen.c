@@ -10,8 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <unistd.h>
 #include "libft.h"
 
 size_t	ft_strlen(const char *str)
@@ -23,15 +21,3 @@ size_t	ft_strlen(const char *str)
 		i++;
 	return (i);
 }
-/*
-int main(void)
-{
-    char *str;
-    size_t p; //tamanho da funcao e size T e nao int//
-    
-    str = "zsdmgnygjkfjgjkfhmgjkgh";
-    p = ft_strlen(str);
-    printf("%zu", p);
-    printf("%s", "\n");
-    return(0);
-}*/

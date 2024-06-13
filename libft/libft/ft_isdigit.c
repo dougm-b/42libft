@@ -19,12 +19,3 @@ int	ft_isdigit(int c)
 	else
 		return (0);
 }
-/*int	main(void)
-{
-	int	c;
-	
-	c = '4';
-	ft_isdigit(c);
-	printf("%d",ft_isdigit(c));
-	return(0);
-}*/

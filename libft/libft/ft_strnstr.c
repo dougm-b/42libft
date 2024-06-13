@@ -32,23 +32,3 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	}
 	return (0);
 }
-/*
-int main(void)
-{
-    const char  *big = "Teste para ft_strnstra";
-    const char  *little = "ara";
-    size_t      len = 15;
-
-    const char  *big = "lorem ipsum dolor sit amet";
-    const char  *little = "ipsum";
-    size_t      len = 0;
-
-
-    printf("%s", ft_strnstr(big, little, len));
-    printf("%s", "\n");
-    printf("%s", strstr(big, little));
-    printf("%s", "\n");
-    return(0);
-}
-
- */

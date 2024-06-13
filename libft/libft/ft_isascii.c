@@ -19,12 +19,3 @@ int	ft_isascii(int c)
 	else
 		return (0);
 }
-/*int	main(void)
-{
-	int	c;
-	
-	c = 200;
-	ft_isascii(c);
-	printf("%d",ft_isascii(c));
-	return(0);
-}*/

@@ -39,31 +39,3 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 		dest_len = size;
 	return (dest_len + src_len);
 }
-/* int main(void)
-{
-	char    dest[15];
-//	const char  *src;
-//	size_t  size = 0;
-
-	//src = "Sempre";
-
-
-  //   size = strlen(src) + strlen(dest) + 2;
-	printf("%zu", ft_strlcat(dest, src, size));
-    printf("%s", "\n");
-//	printf("%s", dest);
-	printf("%s", "\n");
-//    printf("%s", strcat(dest, src));
-    printf("%s", "\n");
-//
-//    write(1, "\n", 1);
-	ft_memset(dest, 'r', 15);
-    printf("%zu",(ft_strlcat(dest, "lorem ipsum dolor sit amet", 5)));
-    printf("%s", "\n");
-    printf("%s", dest);
-//    write(1, "\n", 1);
-//    write(1, dest, 15);
-    return(0);
-}
-// NAO PERCEBO O ERRO QUE DA NO WARMACHINE POIS ESTAO AMBOS COM O MESMO RESULTADO
- */

@@ -19,13 +19,3 @@ int	ft_isalnum(int c)
 	else
 		return (0);
 }
-/*int	main(int argc, char **argv)
-int	main(void)
-{
-	int	c;
-	
-	c = 42;
-	ft_isalnum(c);
-	printf("%d",ft_isalnum(c));
-	return(0);
-}*/

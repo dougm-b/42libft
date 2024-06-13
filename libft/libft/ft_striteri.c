@@ -28,12 +28,3 @@ void	minha_funcao(unsigned int i, char *c)
 {
 	*c = *c + i;
 }
-/*
-int main (void)
-{
-    char  s[] = "Teste para a ft_striteri";
-    
-    ft_striteri(s, minha_funcao);
-    printf("%s", s);
-    return (0);
-}*/

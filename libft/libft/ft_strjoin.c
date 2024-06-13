@@ -37,11 +37,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	str[i] = '\0';
 	return (str);
 }
-/*
-int main(void)
-{
-    char const *s1="Teste para";
-    char const *s2=" a funcao ft_strjoin";
-    printf("%s", ft_strjoin(s1,s2));
-    return(0);
-}*/

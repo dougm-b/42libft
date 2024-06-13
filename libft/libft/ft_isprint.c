@@ -19,12 +19,3 @@ int	ft_isprint(int c)
 	else
 		return (0);
 }
-/*int	main(void)
-{
-	int	c;
-	
-	c = 100;
-	ft_isprint(c);
-	printf("%d",ft_isprint(c));
-	return(0);
-}*/

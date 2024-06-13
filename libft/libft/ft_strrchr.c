@@ -31,36 +31,3 @@ char	*ft_strrchr(const char *s, int c)
 	}
 	return (NULL);
 }
-/* char	*ft_strrchr(const char *s, int c)
-{
-	int	i;
-	char	cc;
-
-	i = 0;
-	cc = (char) c;
-	while (s[i] != '\0')
-		i++;
-	if (cc == 0)
-		return ((char *)s + ft_strlen(s));
-	while (s[i] != s[0])
-	{
-		i--;
-		if (s[i] == c)
-			return ((char *)s + i);
-
-	}
-
-	return (0);
-} */
-/*
-int	main(void)
-{
-	int	c;
-	const char	*s;
-
-	c = 'z';
-	s = "post @domoreir: agora foi!";
-	printf("%s",ft_strrchr(s, c));
-	printf("%s",strrchr(s, c));
-	return(0);
-}*/

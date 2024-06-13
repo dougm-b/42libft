@@ -10,9 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <stdio.h>
-#include <string.h>
 #include "libft.h"
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
@@ -30,17 +27,3 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	}
 	return (0);
 }
-/*
-int	main(void)
-{
-	const char	*s1;
-	const char	*s2;
-	size_t		n;
-
-	s1 = "Agora Vai";
-	s2 = "Agora vai";
-	n = 50;
-	printf("%d", ft_memcmp(s1, s2, n));
-	return (0);
-}
-*/

@@ -39,7 +39,7 @@ int	ft_atoi(const char *nptr)
 }
 // int main(int argc, char **argv)
 // {
-//  //   const char  *nptr= "+ 111344553";
+//     const char  *nptr= "+ 111344553";
 //     printf("%d\n", ft_atoi(NULL));
 //     printf("%d\n", atoi(NULL));
 //     return(0);

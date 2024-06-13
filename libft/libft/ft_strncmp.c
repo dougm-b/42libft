@@ -35,13 +35,3 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	}
 	return (0);
 }
-/*
-int main(void)
-{
-    const char  *s1 = "Teste para ft_strncmp";
-    const char  *s2 = "Teste parA ft_strncmp";
-    size_t      n = 5;
-
-    printf("%d", ft_strncmp(s1, s2, n));
-    return(0);
-}*/
